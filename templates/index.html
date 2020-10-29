@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <h1>To do App</h1>
+    <hr>
+    <h3>What I have to do:</h3>
+    <ul>
+    {% for todo in todos %}
+      <li>{{ todo }}</li>
+    {% endfor %}
+    </ul>
+    <form action='' method='post'>
+      {{ template_form.hidden_tag() }}
+      {{ template_form.name.label }}
+      {{ template_form.name() }}
+      {{ template_form.submit() }}
+    </form>
+
+    </body>
+</html>
